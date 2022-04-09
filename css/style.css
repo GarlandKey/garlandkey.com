@@ -1,9 +1,11 @@
 /******************************************
- * univseral & element selectors
+ * base
  ******************************************/
 
 * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
 
@@ -16,45 +18,125 @@ html {
 body {
     align-items: center;
     background: black;
-    color: white;
+    color: #ccc;
     display: flex;
+    font-family: 'Mulish', Sans-Serif;
+    font-size: 1.6rem;
     height: 100vh;
     justify-content: center;
     width: 100vw;
 }
 
+h2 {
+    font-family: 'Merriweather', Serif;
+    font-size: 4.6rem;
+    font-weight: 400;
+    line-height: 5.2rem;
+    padding-bottom: 2rem;
+}
 
-.container {
-    background: #333;
-    border-radius: 1.5rem;
-    max-height: 57.5rem;
-    max-width: 100rem;
-    min-width: 34rem;
-    padding: 1rem;
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+    padding: 1rem 0;
+}
+
+p {
+    font-family: 'Mulish', Sans-Serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    padding-bottom: 2rem;
+    text-align: justify;
+}
+
+strong {
+    font-weight: 600;
+    letter-spacing: 0.1rem;
 }
 
 
+/******************************************
+ * framework
+ ******************************************/
+
+.container {
+    background: #111;
+    border-radius: 1.5rem;
+    display:flex;
+    flex-flow: column nowrap;
+    max-width: 100rem;
+    min-height: 57.5rem;
+    min-width: 34rem;
+    margin: 1rem;
+}
+
+.section-container {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 .left {
-    width: 40%;
+    align-items: flex-start;
+    border-right: 1px solid #666;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 50rem;
+    padding: 5rem;
+    width: 40rem;
 }
 
 
 .right {
-    width: 60%;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-height: 57.5rem;
+    padding: 5rem;
+    width: 60rem;
 }
 
 
-#logo
-
 /******************************************
- * class & id selectors
+ * navigation
  ******************************************/
 
 .navigation ul {
     align-items: center;
     display: flex;
+    height: 10rem;
     justify-content: space-around;
+    letter-spacing: 0.25rem;
 }
+
+.navigation ul > li > ul {
+    font-size: 3rem;
+    width: 25rem;
+}
+
+.navigation ul > li > ul > li:before {
+    content: &pipe;
+}
+
+
+/******************************************
+ * id selectors
+ ******************************************/
+
+#me {
+    background: url('../images/me.webp') no-repeat center;
+    background-size: 30rem;
+    border-radius: 15rem;
+    height:30rem;
+    margin-bottom: 2rem;
+    width: 30rem;
+}
+
 
 /******************************************
  * attribute selectors
