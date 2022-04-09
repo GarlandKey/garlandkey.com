@@ -1,0 +1,66 @@
+/******************************************
+ * univseral & element selectors
+ ******************************************/
+
+* {
+    box-sizing: border-box;
+  }
+
+
+html {
+    background: black;
+    font-size: 62.5%;
+}
+
+
+body {
+    align-items: center;
+    background: black;
+    color: white;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+
+.container {
+    background: #333;
+    border-radius: 1.5rem;
+    max-height: 57.5rem;
+    max-width: 100rem;
+    min-width: 34rem;
+    padding: 1rem;
+}
+
+
+.left {
+    width: 40%;
+}
+
+
+.right {
+    width: 60%;
+}
+
+
+#logo
+
+/******************************************
+ * class & id selectors
+ ******************************************/
+
+.navigation ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+/******************************************
+ * attribute selectors
+ ******************************************/
+
+/******************************************
+ * media queries
+ ******************************************/
+
