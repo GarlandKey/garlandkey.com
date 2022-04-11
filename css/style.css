@@ -7,6 +7,7 @@
     box-sizing: border-box;
   }
 
+
 a, a:focus, a:hover, a:link, a:active, a:visited {
     color: #ccc;
     text-decoration: none;
@@ -17,6 +18,7 @@ a, a:focus, a:hover, a:link, a:active, a:visited {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
 }  
+
 
 html {
     background: black;
@@ -44,6 +46,7 @@ em {
 }
 
 
+h1,
 h2 {
     font-family: 'Merriweather', Serif;
     font-size: 4.6rem;
@@ -73,7 +76,6 @@ p {
 
 strong {
     font-family: 'Merriweather', Serif;
-    letter-spacing: 0.1rem;
 }
 
 
@@ -103,13 +105,13 @@ strong {
 
 
 .left {
-    align-items: flex-start;
+    align-items: center;
     border-right: 1px solid #666;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    min-height: 50rem;
-    padding: 5rem;
+    min-height: 41.5rem;
+    padding: 0 3rem;
     width: 40rem;
 }
 
@@ -119,8 +121,8 @@ strong {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    min-height: 57.5rem;
-    padding: 5rem;
+    min-height: 41.5rem;
+    padding: 0 5rem;
     width: 60rem;
 }
 
@@ -208,10 +210,11 @@ strong {
 
 
 #darling-and-mason {
-    background: url('../images/darling-and-mason-thumbnail.webp') no-repeat center;
+    background: url('../images/darling-and-mason-thumbnail.webp') #5512ff no-repeat center;
     background-size: 30rem;
-    height:37rem;
-    width: 30rem;
+    border-radius: 1.5rem;
+    height:41.5rem;
+    width: 34rem;
 }
 
 
@@ -220,22 +223,49 @@ strong {
  ******************************************/
 
 
-#services {
-    
+#services small, #services a {
+    color: #ccc;
+    font-size: 1rem;
+}
+
+
+#services a {
+    text-decoration: underline;
+}
+
+
+ #services strong{
+    letter-spacing: 0;
+ }
+
+
+#services-img {
+    background: url(/images/services-img.webp) #5512ff;
+    border-radius: 1.5rem;
+    height: 41.5rem;
+    width: 34rem;
 }
 
 
 /******************************************
- * contacts
+ * contact
  ******************************************/
 
 
-#contact h2:hover {
-    text-decoration: underline;
+#contact > .left > p {
+    padding: 0;
+    text-align: left;    
 }
 
-#contact p {
 
+#contact h2 {
+    font-size: 4.3rem;
+}
+
+
+#contact h2:hover {
+    font-size: 4.3rem;
+    text-decoration: underline;
 }
 
 
