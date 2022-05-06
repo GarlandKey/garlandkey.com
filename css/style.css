@@ -1,28 +1,30 @@
 /******************************************
- * base
- ******************************************/
+* base
+******************************************/
 
 
 * {
     box-sizing: border-box;
-  }
+}
+  
 
-
-a, a:focus, a:hover, a:link, a:active, a:visited {
+a,
+a:focus,
+a:hover,
+a:link,
+a:active,
+a:visited {
     color: #ccc;
     text-decoration: none;
-    user-select: none; /* Modern Browsers */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer */
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
 }  
 
 
 html {
-    background: black;
+    display: flex;
+    background: #000;
+    color: #ccc;
     font-size: 62.5%;
+    justify-content: center;
 }
 
 
@@ -80,8 +82,8 @@ strong {
 
 
 /******************************************
- * framework
- ******************************************/
+* framework
+******************************************/
 
 
 .container {
@@ -133,8 +135,25 @@ strong {
 
 
 /******************************************
- * navigation
- ******************************************/
+* navigation
+******************************************/
+
+
+.navigation a,
+.navigation a:focus,
+.navigation a:hover,
+.navigation a:link,
+.navigation a:active,
+.navigation a:visited {
+    color: #ccc;
+    text-decoration: none;
+    user-select: none; /* Modern Browsers */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+}   
 
 
 .navigation ul {
@@ -179,8 +198,8 @@ strong {
 
 
 /******************************************
- * home
- ******************************************/
+* home
+******************************************/
 
 
 #home > .left > p {
@@ -190,7 +209,7 @@ strong {
 
 
 #me {
-    background: url('../images/me.webp') no-repeat center;
+    background: url('../img/me.webp') no-repeat center;
     background-size: 30rem;
     border-radius: 15rem;
     height:30rem;
@@ -200,8 +219,8 @@ strong {
 
 
 /******************************************
- * portfolio
- ******************************************/
+* portfolio
+******************************************/
 
 
 #portfolio a:hover {
@@ -210,7 +229,7 @@ strong {
 
 
 #darling-and-mason {
-    background: url('../images/darling-and-mason-thumbnail.webp') #5512ff no-repeat center;
+    background: url('../img/darling-and-mason-thumbnail.webp') #5512ff no-repeat center;
     background-size: 30rem;
     border-radius: 1.5rem;
     height:41.5rem;
@@ -219,8 +238,8 @@ strong {
 
 
 /******************************************
- * services
- ******************************************/
+* services
+******************************************/
 
 
 #services small, #services a {
@@ -234,13 +253,13 @@ strong {
 }
 
 
- #services strong{
+#services strong{
     letter-spacing: 0;
- }
+}
 
 
 #services-img {
-    background: url(/images/services-img.webp) #5512ff;
+    background: url(/img/services-img.webp) #5512ff;
     border-radius: 1.5rem;
     height: 41.5rem;
     width: 34rem;
@@ -248,8 +267,8 @@ strong {
 
 
 /******************************************
- * contact
- ******************************************/
+* contact
+******************************************/
 
 
 #contact > .left > p {
@@ -270,8 +289,8 @@ strong {
 
 
 /******************************************
- * footer
- ******************************************/
+* footer
+******************************************/
 
 
 footer {
@@ -300,7 +319,23 @@ footer > section > small > a:active {
 }
 
 
-/******************************************
- * media queries
- ******************************************/
+/*****************************************
+* media queries
+******************************************/
 
+
+/* mouse & trackball */
+@media (hover: hover){
+
+}
+
+
+/* touchscreen */
+@media (pointer: coarse){
+
+}
+
+
+@media screen and (max-width: 1020px) {
+
+}
