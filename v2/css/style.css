@@ -104,28 +104,32 @@ section {
 \*---------------------------------------------------------------------------*/
 
 
-@-webkit-keyframes slide-down {
+@-webkit-keyframes fade-in {
     0% {
-        -webkit-transform: translateY(-100%);
-                transform: translateY(-100%);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
     }
     100% {
-        -webkit-transform: translateY(0);
-      transform: translateY(0);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
     }
 }
 
 
-@keyframes slide-down {
+@keyframes fade-in {
     0% {
-        -webkit-transform: translateY(-100%);
-                transform: translateY(-100%);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
     }
     100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
     }
-}
+}  
 
 
 @-webkit-keyframes inflate-up {
@@ -163,15 +167,48 @@ section {
     }
 }
 
-.slide-down {
-    -webkit-animation: slide-down 1s;
-            animation: slide-down 1s;
+
+@-webkit-keyframes slide-down {
+    0% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
 }
+
+
+@keyframes slide-down {
+    0% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+
+.fade-in {
+	-webkit-animation: fade-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: fade-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
 
 .inflate-up {
     -webkit-animation: inflate-up 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation: inflate-up 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+
+
+.slide-down {
+    -webkit-animation: slide-down 1s;
+            animation: slide-down 1s;
+}
+
 
 /*---------------------------------------------------------------------------*\
     SHARED
@@ -210,13 +247,14 @@ section {
 \*---------------------------------------------------------------------------*/
 
 
-/* navigation section */
+/* topnav */
 
 
 #topnav {
     display: flex;
-    font-size: 3rem;
-    height: 10rem;
+    /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(3rem + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
+    height: 10vh;
     justify-content: flex-end;
     overflow: hidden;
     position: fixed;
