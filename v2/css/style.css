@@ -4,11 +4,55 @@
 
 
 html {
-    background: gray;
+    background: #000;
     font-size: 62.5%;
     font-family: 'Mulish', sans-serif;
     height: 100vh;
     width: 100vw;
+}
+
+
+/* keyframes */
+
+
+@keyframes navSlideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+
+@keyframes navHover {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(2, 2);
+    }
+}
+
+
+/* classes */
+
+
+.blurb {
+    color: #fff;
+    font-size: 5rem;
+    width: 75rem;
+}
+
+
+.card-full {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.card-full > img {
+    width: 30rem;
 }
 
 
@@ -17,15 +61,17 @@ html {
 
 #navigation {
     align-items: center;
+    animation-name: navSlideDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     background: transparent;
-    color: white;
     display: flex;
     font-size: 3rem;
     height: 10rem;
     justify-content: flex-end;
     overflow: hidden;
     position: fixed;
-    text-shadow: 0.25rem 0.25rem 0.75rem black;
+    text-shadow: -0.25rem 0.25rem 0.75rem black;
     top: 0;
     width: 100vw;
     z-index: 1;
@@ -33,6 +79,7 @@ html {
 
 
 #navigation ul {
+    align-items: center;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -40,8 +87,24 @@ html {
 }
 
 
+#navigation a,
+#navigation a:active,
+#navigation a:hover,
+#navigation a:link,
+#navigation a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#navigation a:hover,
+#navigation a:active {
+    transform: scale(2);
+}
+
+
 #navigation svg {
-    filter: drop-shadow(0.25rem 0.25rem 0.75rem black);
+    filter: drop-shadow(-0.25rem 0.25rem 0.75rem black);
     transform: scale(0.75);
 }
 
@@ -70,9 +133,7 @@ html {
     display: flex;
     flex-flow: column nowrap;
     gap: 7.5rem;
-    height: 100vh;
     justify-content: center;
-    width: 100vw;
 }
 
 
@@ -82,22 +143,29 @@ html {
 }
 
 
-#splash p {
-    color: #fff;
-    font-size: 5rem;
-    width: 75rem;
-}
-
-
 #splash #headshot {
-    border-radius: 25rem;
-    width: 50rem;
+    width: 40rem;
 }
 
 
 #splash svg {
     transform: scale(1);
 }
+
+
+/* ducky */
+
+
+#ducky img {
+    height: 45vh;
+    left: 5vw;
+    position: relative;
+    top: 20vh;
+    transform: scaleX(-1);
+}
+
+
+/* skill cards */
 
 
 #css,
@@ -107,22 +175,12 @@ html {
 #nodejs,
 #postgresql,
 #react {
+    align-items: flex-end;
     color: #fff;
     display: flex;
-    font-size: 3rem;
-    height: 100vh;
-    width: 100vw;
-}
-
-
-#css img,
-#html img,
-#js img,
-#mongodb img,
-#nodejs img,
-#postgresql img,
-#react img {
-    width: 50rem;
+    flex-flow: wrap;
+    font-size: 5rem;
+    justify-content: space-around;
 }
 
 
@@ -138,6 +196,10 @@ html {
 
 #js {
     background: #f4dd40;
+}
+
+
+#js > .blurb {
     color: #000;
 }
 

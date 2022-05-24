@@ -15,15 +15,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- navigation -->
     <nav id="navigation">
         <ul>
-            <li>about</li>
-            <li>portfolio</li>
-            <li>contact</li>
+            <li><a href="#splash">about</a></li>
+            <li><a href="#skills">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
             <li>
+                <!-- dark mode switch -->
                 <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-                    <circle style="fill:none;stroke:#fff;stroke-width:3.00022;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000" cx="25" cy="25" r="23.5"/>
-                    <path style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:6.6053;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#000" d="M25 1.5A23.5 23.5 0 0 0 1.5 25 23.5 23.5 0 0 0 25 48.5v-47z"/>
+                    <circle style="fill:none;stroke:#fff;stroke-width:3.00000;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#fff" cx="25" cy="25" r="23.5"/>
+                    <path style="fill:#fff;fill-opacity:1;stroke:none;stroke-width:6.6053;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;paint-order:stroke fill markers;stop-color:#fff" d="M25 1.5A23.5 23.5 0 0 0 1.5 25 23.5 23.5 0 0 0 25 48.5v-47z"/>
                 </svg>
             </li>
         </ul>
@@ -32,42 +34,45 @@
     <nav id="scroll">
         <img src="img/scroll.svg" alt="scroll">
     </nav>-->
-    <section id="splash">
-        <img id="headshot" src="img/photo.png" alt="Portrait">
+    <section class="card-full" id="splash">
+        <img id="headshot" src="img/photo-wave.webp" alt="Portrait">
         <img src="img/logo.svg" alt="" id="Garland Key">
         <h1>Full-stack Software Engineer</h1>
-        <p>I’m a full-stack software engineer with an artistic side. My greatest strength is my divergent thought process.</p>
+        <p class="blurb">I’m a full-stack software engineer with an artistic side. My greatest strength is my divergent thought process.</p>
     </section>
+    <!-- ducky -->
     <div id="ducky">
         <img src="img/ducky.webp" alt="Rubber ducky">
     </div>
-    <section id="css">
-        <p>I wield CSS3 to make beautiful, responsive web applications, always considering the separation of concerns.</p>
+    <!-- skill cards -->
+    <section class="card-full" id="css">
+        <p class="blurb">I wield CSS3 to make beautiful, responsive web applications, always considering the separation of concerns.</p>
         <img src="img/css3.svg" alt="CSS 3">
     </section>
-    <section id="html">
-        <p>I use semantic HTML to layout elements in an easy-to-understand way.</p>
+    <section class="card-full" id="html">
+        <p class="blurb">I use semantic HTML to layout elements in an easy-to-understand way.</p>
         <img src="img/html5.svg" alt="HTML 5">
     </section>
-    <section id="js">
-        <p>I use an object-oriented approach to JavaScript, paying particular attention to style guides for maximum organization and reusability.</p>
+    <section class="card-full" id="js">
+        <p class="blurb">I use an object-oriented approach to JavaScript, paying particular attention to style guides for maximum organization and reusability.</p>
         <img src="img/js.svg" alt="JavaScript">
     </section>
-    <section id="mongodb">
-        <p>I work with MongoDB, allowing me to pull results in a JSON format quickly.</p>
+    <section class="card-full" id="mongodb">
+        <p class="blurb">I work with MongoDB, allowing me to pull results in a JSON format quickly.</p>
         <img src="img/mongodb.svg" alt="MongoDB">
     </section>
-    <section id="nodejs">
-        <p>I utilize the asynchronous capabilities of Node.js to avoid blocking and ensure my web applications are fast.</p>
+    <section class="card-full" id="nodejs">
+        <p class="blurb">I utilize the asynchronous capabilities of Node.js to avoid blocking and ensure my web applications are fast.</p>
         <img src="img/nodejs.svg" alt="Node.js">
     </section>
-    <section id="postgresql">
-        <p>When dealing with compatibility and large numbers of tables, I use PostgreSQL for its reliability and ability to scale up.</p>
+    <section class="card-full" id="postgresql">
+        <p class="blurb">When dealing with compatibility and large numbers of tables, I use PostgreSQL for its reliability and ability to scale up.</p>
         <img src="img/postgresql.svg" alt="PostgreSQL">
     </section>
-    <section id="react">
-        <p>I use React.js to build user interfaces for its flexibility across browsers and operating systems.</p>
+    <section class="card-full" id="react">
+        <p class="blurb">I use React.js to build user interfaces for its flexibility across browsers and operating systems.</p>
         <img src="img/react.svg" alt="React.js & React Native">
     </section>
+    <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>
