@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 330 300"
+   viewBox="0 0 300 300"
    version="1.1"
    id="svg6"
    sodipodi:docname="mongodb.svg"
-   width="330"
+   width="300"
    height="300"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,19 +26,19 @@
      inkscape:pagecheckerboard="1"
      showgrid="false"
      inkscape:zoom="1.3857143"
-     inkscape:cx="270.25773"
-     inkscape:cy="240.30928"
-     inkscape:window-width="3840"
-     inkscape:window-height="2083"
-     inkscape:window-x="0"
+     inkscape:cx="138.19587"
+     inkscape:cy="158.04124"
+     inkscape:window-width="1297"
+     inkscape:window-height="1027"
+     inkscape:window-x="1220"
      inkscape:window-y="48"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg6"
      inkscape:showpageshadow="0"
      inkscape:deskcolor="#505050" />
   <g
      id="g322"
-     transform="matrix(0.37414586,0,0,0.37639717,-55.902454,194.80269)">
+     transform="matrix(0.3401326,0,0,0.33875745,-50.820412,205.32242)">
     <path
        class="cls-1"
        d="m 637.4309,-457.36229 c -22.73775,-26.82496 -42.3023,-54.23811 -46.29505,-59.80475 a 0.9036255,0.90326837 0 0 0 -1.47101,0 c -3.97175,5.62967 -23.5363,33.04282 -46.23201,59.86778 -194.82586,247.97867 30.70226,415.335395 30.70226,415.335395 l 1.82825,1.281379 c 1.72319,25.879695 5.96813,63.018742 5.96813,63.018742 h 16.95875 c 0,0 4.20291,-37.055015 5.94711,-63.018742 l 1.84929,-1.449422 c 0,0 225.5281,-167.188682 30.74428,-415.230382 m -47.00954,411.722332 v 0 c 0,0 -10.10801,-8.612542 -12.8399,-12.939826 v -0.462145 l 12.23048,-270.056241 a 0.65145094,0.65119346 0 0 1 1.28188,0 l 12.27249,270.098246 v 0.462145 c -2.73189,4.201247 -12.83988,12.939847 -12.83988,12.939847"

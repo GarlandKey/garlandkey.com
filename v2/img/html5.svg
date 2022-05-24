@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 240 300"
+   viewBox="0 0 300 300"
    version="1.1"
    id="svg6"
    sodipodi:docname="html5.svg"
-   width="240"
+   width="300"
    height="300"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -22,20 +22,20 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      showgrid="false"
-     inkscape:zoom="1.9596959"
-     inkscape:cx="137.52134"
-     inkscape:cy="226.56576"
-     inkscape:window-width="3840"
-     inkscape:window-height="2083"
-     inkscape:window-x="0"
-     inkscape:window-y="48"
-     inkscape:window-maximized="1"
+     inkscape:zoom="1.3857143"
+     inkscape:cx="143.60825"
+     inkscape:cy="131.34021"
+     inkscape:window-width="1323"
+     inkscape:window-height="1027"
+     inkscape:window-x="2517"
+     inkscape:window-y="1104"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg6"
      inkscape:showpageshadow="0"
      inkscape:deskcolor="#505050" />
   <g
      id="g13621"
-     transform="matrix(1.1921587,0,0,1.1857705,-14.117854,-0.55743829)">
+     transform="matrix(1.1921587,0,0,1.1857705,15.882146,-0.5574265)">
     <path
        d="M 11.84226,0.47010637 H 27.4903 V 15.98208 H 41.91371 V 0.47010637 H 57.56176 V 47.414236 H 41.91371 V 31.766193 H 27.62637 V 47.414236 H 11.84226 M 78.24439,16.11815 H 64.43329 V 0.47010637 h 43.33828 V 16.11815 H 93.89243 V 47.414236 H 78.24439 M 114.6431,0.47010637 h 16.39643 L 141.1087,17.002604 151.17788,0.47010637 h 16.39643 V 47.414236 H 151.92626 V 24.146276 L 140.97263,41.018949 130.019,24.146276 v 23.26796 H 114.6431 M 175.33029,0.47010637 h 15.64805 V 31.902263 h 22.1794 v 15.511973 h -37.82745"
        id="path5080"

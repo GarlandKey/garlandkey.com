@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   viewBox="0 0 290 300"
+   viewBox="0 0 300 300"
    version="1.1"
    id="svg6"
    sodipodi:docname="postgresql.svg"
-   width="290"
+   width="300"
    height="300"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -252,20 +252,20 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="1"
      showgrid="false"
-     inkscape:zoom="2.7714285"
-     inkscape:cx="28.324743"
-     inkscape:cy="204.94846"
-     inkscape:window-width="3840"
-     inkscape:window-height="2083"
+     inkscape:zoom="1.3857143"
+     inkscape:cx="149.38145"
+     inkscape:cy="158.04124"
+     inkscape:window-width="1220"
+     inkscape:window-height="1027"
      inkscape:window-x="0"
      inkscape:window-y="48"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg6"
      inkscape:showpageshadow="0"
      inkscape:deskcolor="#505050" />
   <g
      id="g1087"
-     transform="scale(0.99995028,1.0000502)">
+     transform="matrix(0.99995028,0,0,1.0000502,5.0066495,-0.00683746)">
     <g
        id="path18378" />
     <g

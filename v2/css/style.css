@@ -1,3 +1,83 @@
+/*---------------------------------------------------------------------------*\
+
+    https://garlandkey.com
+    License: none (public domain)
+
+    CONTENTS
+
+        1. RESET - http://meyerweb.com/eric/tools/css/reset/
+        2. MAIN - Type rules
+        3. ANIMATIONS - Keyframe & animations
+        4. SHARED - Shared rules
+        5. SECTIONS - Unique rules
+        6. QUERIES -  Media queries
+
+\*---------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------*\
+    RESET
+\*---------------------------------------------------------------------------*/
+
+
+html,body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+section {
+	display: block;
+}
+
+
+body {
+	line-height: 1;
+}
+
+
+ol, ul {
+	list-style: none;
+}
+
+
+blockquote, q {
+	quotes: none;
+}
+
+
+blockquote:is(:before, :after),
+q:is(:before, :after) {
+	content: '';
+	content: none;
+}
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*---------------------------------------------------------------------------*\
+    MAIN
+\*---------------------------------------------------------------------------*/
+
+
 * {
     box-sizing: border-box;
 }
@@ -5,33 +85,110 @@
 
 html {
     background: #000;
-    font-size: 62.5%;
-    font-family: 'Mulish', sans-serif;
+    font: 62.5% 'Mulish', sans-serif;
     height: 100vh;
+    scroll-snap-type: y mandatory;
+    scroll-snap-stop: normal; /* normal || always */
+    scroll-behavior: smooth;
     width: 100vw;
 }
 
 
-/* keyframes */
+section {
+    scroll-snap-align: center;
+}
 
 
-@keyframes navSlideDown {
+/*---------------------------------------------------------------------------*\
+    ANIMATIONS
+\*---------------------------------------------------------------------------*/
+
+
+@-webkit-keyframes slide-down {
     0% {
-      transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
     }
     100% {
+        -webkit-transform: translateY(0);
       transform: translateY(0);
     }
 }
 
 
-/* classes */
+@keyframes slide-down {
+    0% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+
+@-webkit-keyframes inflate-up {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+}
+
+
+@keyframes inflate-up {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 0% 100%;
+              transform-origin: 0% 100%;
+      opacity: 1;
+    }
+}
+
+.slide-down {
+    -webkit-animation: slide-down 1s;
+            animation: slide-down 1s;
+}
+
+.inflate-up {
+    -webkit-animation: inflate-up 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: inflate-up 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/*---------------------------------------------------------------------------*\
+    SHARED
+\*---------------------------------------------------------------------------*/
+
+
+.front-blurb {
+    display: none;
+}
 
 
 .blurb {
+    /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(2rem + (60 - 20) * ((100vw - 300px) / (1600 - 300)));
     color: #fff;
-    font-size: 5rem;
-    width: 75rem;
+    max-width: 95vw;
+    min-width: 50vw;
 }
 
 
@@ -41,20 +198,22 @@ html {
 }
 
 
-.card-full > img {
-    width: 30rem;
+.skill-card-image {
+    align-self: flex-end;
+    height: 40vh;
+    padding: 5rem;
 }
+
+
+/*---------------------------------------------------------------------------*\
+    SECTIONS
+\*---------------------------------------------------------------------------*/
 
 
 /* navigation section */
 
 
-#navigation {
-    align-items: center;
-    animation-name: navSlideDown;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    background: transparent;
+#topnav {
     display: flex;
     font-size: 3rem;
     height: 10rem;
@@ -68,7 +227,7 @@ html {
 }
 
 
-#navigation ul {
+#topnav ul {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
@@ -77,53 +236,32 @@ html {
 }
 
 
-#navigation a {
+#topnav a {
     transition: all .2s ease-in-out;
 }
 
 
-#navigation a,
-#navigation a:active,
-#navigation a:hover,
-#navigation a:link,
-#navigation a:visited {
+#topnav a:is(:active,:focus,:hover,:link,:visited) {
     display:inline-block;
     color: #fff;
     text-decoration: none;
 }
 
 
-#navigation a:hover,
-#navigation a:active {
+#topnav a:is(:hover,:focus,:active) {
     transform: scale(1.1);
     border-bottom: 0.1rem solid white;
 }
 
 
-#navigation svg {
+#topnav svg {
     filter: drop-shadow(-0.25rem 0.25rem 0.3rem rgba(0, 0, 0, 0.5));
     transform: scale(0.75);
     transition: all .2s ease-in-out;
 }
 
-#navigation svg:active,
-#navigation svg:hover {
+#topnav svg:is(:active, :hover) {
     transform: scale(0.85);
-}
-
-
-/* scroll section */
-
-
-#scroll {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
-}
-
-
-#scroll img {
-    height: 5rem;
 }
 
 
@@ -141,12 +279,13 @@ html {
 
 
 #splash h1 {
-    color: #fff;
-    font-size: 10rem;
+    color: #fff; 
+    font-size: calc(2rem + (90 - 20) * ((100vw - 300px) / (1600 - 300)));
 }
 
 
 #splash #headshot {
+    display:none;
     width: 40rem;
 }
 
@@ -156,13 +295,20 @@ html {
 }
 
 
+#logo {
+    max-height: 25vh;
+    width: 80vw;
+}
+
+
 /* ducky */
 
 
 #ducky img {
+    display: none;
     height: 45vh;
     left: 5vw;
-    position: relative;
+    position: fixed;
     top: 20vh;
     transform: scaleX(-1);
 }
@@ -178,12 +324,13 @@ html {
 #nodejs,
 #postgresql,
 #react {
-    align-items: flex-end;
+    align-items: center;
     color: #fff;
     display: flex;
     flex-flow: wrap;
     font-size: 5rem;
-    justify-content: space-around;
+    gap: 10rem;
+    justify-content: flex-end;
 }
 
 
@@ -225,3 +372,23 @@ html {
 #react {
     background: #282c34;
 }
+
+
+/* scroll section */
+
+
+#scroll {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+}
+
+
+#scroll img {
+    height: 5rem;
+}
+
+
+/*---------------------------------------------------------------------------*\
+    QUERIES
+\*---------------------------------------------------------------------------*/
