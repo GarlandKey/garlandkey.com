@@ -98,3 +98,65 @@ html {
 #splash svg {
     transform: scale(1);
 }
+
+
+#css,
+#html,
+#js,
+#mongodb,
+#nodejs,
+#postgresql,
+#react {
+    color: #fff;
+    display: flex;
+    font-size: 3rem;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#css img,
+#html img,
+#js img,
+#mongodb img,
+#nodejs img,
+#postgresql img,
+#react img {
+    width: 50rem;
+}
+
+
+#css {
+    background: #264de4;
+}
+
+
+#html {
+    background: #e44d26;
+}
+
+
+#js {
+    background: #f4dd40;
+    color: #000;
+}
+
+
+#mongodb {
+    background: #00684a;
+}
+
+
+#nodejs {
+    background: #333333;
+}
+
+
+#postgresql {
+    background: #336791;
+}
+
+
+#react {
+    background: #282c34;
+}
