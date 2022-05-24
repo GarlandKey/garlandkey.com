@@ -25,16 +25,6 @@ html {
 }
 
 
-@keyframes navHover {
-    from {
-        transform: scale(1, 1);
-    }
-    to {
-        transform: scale(2, 2);
-    }
-}
-
-
 /* classes */
 
 
@@ -71,7 +61,7 @@ html {
     justify-content: flex-end;
     overflow: hidden;
     position: fixed;
-    text-shadow: -0.25rem 0.25rem 0.75rem black;
+    text-shadow: -0.25rem 0.25rem 0.3rem rgba(0, 0, 0, 0.5);
     top: 0;
     width: 100vw;
     z-index: 1;
@@ -87,11 +77,17 @@ html {
 }
 
 
+#navigation a {
+    transition: all .2s ease-in-out;
+}
+
+
 #navigation a,
 #navigation a:active,
 #navigation a:hover,
 #navigation a:link,
 #navigation a:visited {
+    display:inline-block;
     color: #fff;
     text-decoration: none;
 }
@@ -99,13 +95,20 @@ html {
 
 #navigation a:hover,
 #navigation a:active {
-    transform: scale(2);
+    transform: scale(1.1);
+    border-bottom: 0.1rem solid white;
 }
 
 
 #navigation svg {
-    filter: drop-shadow(-0.25rem 0.25rem 0.75rem black);
+    filter: drop-shadow(-0.25rem 0.25rem 0.3rem rgba(0, 0, 0, 0.5));
     transform: scale(0.75);
+    transition: all .2s ease-in-out;
+}
+
+#navigation svg:active,
+#navigation svg:hover {
+    transform: scale(0.85);
 }
 
 
