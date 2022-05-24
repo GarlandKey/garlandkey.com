@@ -94,6 +94,12 @@ html {
 }
 
 
+h1 {
+    color: #fff; 
+    font-size: calc(2rem + (90 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
 section {
     scroll-snap-align: center;
 }
@@ -129,42 +135,6 @@ section {
               filter: blur(0px);
       opacity: 1;
     }
-}  
-
-
-@-webkit-keyframes inflate-up {
-    0% {
-      -webkit-transform: scaleY(0);
-              transform: scaleY(0);
-      -webkit-transform-origin: 0% 100%;
-              transform-origin: 0% 100%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
-      -webkit-transform-origin: 0% 100%;
-              transform-origin: 0% 100%;
-      opacity: 1;
-    }
-}
-
-
-@keyframes inflate-up {
-    0% {
-      -webkit-transform: scaleY(0);
-              transform: scaleY(0);
-      -webkit-transform-origin: 0% 100%;
-              transform-origin: 0% 100%;
-      opacity: 1;
-    }
-    100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
-      -webkit-transform-origin: 0% 100%;
-              transform-origin: 0% 100%;
-      opacity: 1;
-    }
 }
 
 
@@ -192,15 +162,21 @@ section {
 }
 
 
-.fade-in {
-	-webkit-animation: fade-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-            animation: fade-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+@keyframes unroll-up {
+    0% {
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
 }
 
 
-.inflate-up {
-    -webkit-animation: inflate-up 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation: inflate-up 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.fade-in {
+	-webkit-animation: fade-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: fade-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 
@@ -210,14 +186,32 @@ section {
 }
 
 
+.logo-unroll-up {
+    -webkit-animation: unroll-up 1s;
+            animation: unroll-up 1s;
+}
+
+
+.h1-unroll-up {
+    -webkit-animation: unroll-up 1s 2s;
+            animation: unroll-up 1s 2s;
+}
+
+
 /*---------------------------------------------------------------------------*\
     SHARED
 \*---------------------------------------------------------------------------*/
 
 
-.front-blurb {
+.hidden {
     display: none;
 }
+
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
 
 
 .blurb {
@@ -299,7 +293,7 @@ section {
 }
 
 #topnav svg:is(:active, :hover) {
-    transform: scale(0.85);
+    transform: scale(1);
 }
 
 
@@ -316,24 +310,9 @@ section {
 }
 
 
-#splash h1 {
-    color: #fff; 
-    font-size: calc(2rem + (90 - 20) * ((100vw - 300px) / (1600 - 300)));
-}
-
-
-#splash #headshot {
-    display:none;
-    width: 40rem;
-}
-
-
-#splash svg {
-    transform: scale(1);
-}
-
 
 #logo {
+    overflow: hidden;
     max-height: 25vh;
     width: 80vw;
 }
