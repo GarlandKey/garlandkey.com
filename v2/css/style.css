@@ -8,7 +8,7 @@
         1. RESET - http://meyerweb.com/eric/tools/css/reset/
         2. MAIN - Type rules
         3. SHARED - Shared rules
-        4. SECTIONS - Unique rules
+        4. SECTIONS - Organized in loading order of semantic html
         5. QUERIES -  Media queries
         6. ANIMATIONS - Keyframe & animations
 
@@ -94,13 +94,6 @@ html {
 }
 
 
-h1 {
-    color: #fff; 
-    font-size: calc(2rem + (90 - 20) * ((100vw - 300px) / (1600 - 300)));
-    padding: 5rem;
-}
-
-
 section {
     scroll-snap-align: center;
 }
@@ -120,7 +113,6 @@ section {
 .overflow-hidden {
     overflow: hidden;
 }
-
 
 
 .blurb {
@@ -195,13 +187,13 @@ section {
 }
 
 
-#topnav svg {
-    filter: drop-shadow(-0.25rem 0.25rem 0.3rem rgba(0, 0, 0, 0.5));
+#topnav i {
+    color: #fff;
     transform: scale(0.75);
     transition: all .2s ease-in-out;
 }
 
-#topnav svg:is(:active, :hover) {
+#topnav i:is(:active, :hover) {
     transform: scale(1);
 }
 
@@ -211,18 +203,25 @@ section {
 
 #splash {
     align-items: center;
-    background: #520616;
+    background: #fff;
+    color: #000;
     display: flex;
     flex-flow: column nowrap;
-    gap: 7.5rem;
+    gap: 4vh;
     justify-content: center;
 }
 
 
+#splash h1 {
+    color: #000;
+    font-size: clamp(2rem, 1rem + 2vw, 15rem);
+    padding-bottom: 5rem;
+}
+
 
 #logo {
     max-height: 25vh;
-    width: 80vw;
+    width: 35vw;
 }
 
 
@@ -239,7 +238,7 @@ section {
 }
 
 
-/* skill cards */
+/* skills */
 
 
 #css,
