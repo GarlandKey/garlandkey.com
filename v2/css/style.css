@@ -145,7 +145,7 @@ section {
 /* topnav */
 
 
-#topnav {
+.topnav {
     display: flex;
     /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
     font-size: calc(3rem + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
@@ -160,7 +160,7 @@ section {
 }
 
 
-#topnav ul {
+.topnav ul {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
@@ -169,31 +169,31 @@ section {
 }
 
 
-#topnav a {
+.topnav a {
     transition: all .2s ease-in-out;
 }
 
 
-#topnav a:is(:active,:focus,:hover,:link,:visited) {
+.topnav a:is(:active,:focus,:hover,:link,:visited) {
     display:inline-block;
     color: #fff;
     text-decoration: none;
 }
 
 
-#topnav a:is(:hover,:focus,:active) {
+.topnav a:is(:hover,:focus,:active) {
     transform: scale(1.1);
     border-bottom: 0.1rem solid white;
 }
 
 
-#topnav i {
+.topnav i {
     color: #fff;
     transform: scale(0.75);
     transition: all .2s ease-in-out;
 }
 
-#topnav i:is(:active, :hover) {
+.topnav i:is(:active, :hover) {
     transform: scale(1);
 }
 
@@ -201,7 +201,7 @@ section {
 /* splash section */
 
 
-#splash {
+.hero {
     align-items: center;
     background: #fff;
     color: #000;
@@ -212,7 +212,7 @@ section {
 }
 
 
-#splash h1 {
+.hero h1 {
     color: #000;
     font-size: clamp(2rem, 1rem + 2vw, 15rem);
     padding-bottom: 5rem;
@@ -241,13 +241,7 @@ section {
 /* skills */
 
 
-#css,
-#html,
-#js,
-#mongodb,
-#nodejs,
-#postgresql,
-#react {
+.skills {
     align-items: center;
     color: #fff;
     display: flex;
@@ -257,6 +251,14 @@ section {
     justify-content: flex-end;
 }
 
+
+.skills p {
+    /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-size: calc(2rem + (60 - 20) * ((100vw - 300px) / (1600 - 300)));
+    color: #fff;
+    max-width: 95vw;
+    min-width: 50vw;
+}
 
 #css {
     background: #264de4;
