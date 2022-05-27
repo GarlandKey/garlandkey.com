@@ -115,15 +115,6 @@ section {
 }
 
 
-.blurb {
-    /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-size: calc(2rem + (60 - 20) * ((100vw - 300px) / (1600 - 300)));
-    color: #fff;
-    max-width: 95vw;
-    min-width: 50vw;
-}
-
-
 .card-full {
     height: 100vh;
     width: 100vw;
@@ -243,16 +234,15 @@ section {
 
 .skills {
     align-items: center;
+    background-color: ;
     color: #fff;
     display: flex;
     flex-flow: wrap;
-    font-size: 5rem;
-    gap: 10rem;
-    justify-content: flex-end;
+    justify-content: space-evenly
 }
 
 
-.skills p {
+.blurb {
     /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
     font-size: calc(2rem + (60 - 20) * ((100vw - 300px) / (1600 - 300)));
     color: #fff;
@@ -260,45 +250,14 @@ section {
     min-width: 50vw;
 }
 
-#css {
-    background: #264de4;
+.skills ul {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vw;
+    justify-content: space-evenly;
 }
-
-
-#html {
-    background: #e44d26;
-}
-
-
-#js {
-    background: #f4dd40;
-}
-
-
-#js > .blurb {
-    color: #000;
-}
-
-
-#mongodb {
-    background: #00684a;
-}
-
-
-#nodejs {
-    background: #333333;
-}
-
-
-#postgresql {
-    background: #336791;
-}
-
-
-#react {
-    background: #282c34;
-}
-
 
 /* scroll section */
 
