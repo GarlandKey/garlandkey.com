@@ -121,6 +121,11 @@ section {
 }
 
 
+.filter-white{
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+
+
 .skill-card-image {
     align-self: flex-end;
     height: 40vh;
@@ -234,7 +239,7 @@ section {
 
 .skills {
     align-items: center;
-    background-color: ;
+    background-color: #333;
     color: #fff;
     display: flex;
     flex-flow: wrap;
@@ -246,18 +251,27 @@ section {
     /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
     font-size: calc(2rem + (60 - 20) * ((100vw - 300px) / (1600 - 300)));
     color: #fff;
+    width: calc(2rem + (60 - 20) * ((100vw - 300px) / (1600 - 300)));
     max-width: 95vw;
     min-width: 50vw;
 }
+
+
+.skills img {
+    filter: brightness(0) invert(1);
+    width: 15rem;
+}
+
 
 .skills ul {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 2vw;
     justify-content: space-evenly;
 }
+
 
 /* scroll section */
 
@@ -272,6 +286,7 @@ section {
 #scroll img {
     height: 5rem;
 }
+
 
 
 /*---------------------------------------------------------------------------*\
