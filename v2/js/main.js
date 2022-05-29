@@ -1,13 +1,13 @@
 let colors = {
     css: '#264de4',
     html: '#e44d26',
-    illustrator: '#330000',
+    ai: '#330000',
     js: '#f4dd40',
-    lightroom: '#001e36',
-    mongodb: '#00684a',
-    nodejs: '#333333',
-    photoshop: '#001e36',
-    postgresql: '#336791',
+    lr: '#001e36',
+    mongo: '#00684a',
+    node: '#333333',
+    ps: '#001e36',
+    sql: '#336791',
     react: '#282c34'
 }
 
@@ -24,6 +24,7 @@ let selectors = {
     imgPS: document.querySelector('#imgPS'),
     imgSQL: document.querySelector('#imgSQL'),
     imgReact: document.querySelector('#imgReact'),
+    pBlurb: document.querySelector('#pBlurb'),
     pCSS: document.querySelector('#pCSS'),
     pHTML: document.querySelector('#pHTML'),
     pJS: document.querySelector('#pJS'),
@@ -33,12 +34,61 @@ let selectors = {
     pReact: document.querySelector('#pReact')
 }
 
-function css() {
+function cssInfo() {
     console.log('hover detected')
-    console.log(colors.css)
     selectors.skills.style.backgroundColor = colors.css
-    selectors.blurb.classList.toggle('hidden')
+    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
     selectors.pCSS.classList.toggle('hidden')
 }
 
-selectors.imgCSS.addEventListener('mouseover', css);
+function htmlInfo() {
+    console.log('hover detected') 
+    selectors.skills.style.backgroundColor = colors.html
+    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
+    selectors.pHTML.classList.toggle('hidden')
+}
+
+function jsInfo() {
+    console.log('hover detected') 
+    selectors.skills.style.classList.remove('white')
+    selectors.skills.style.classList.add('black')
+    selectors.pJS.style.color = '#000'
+    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
+    selectors.pJS.classList.toggle('hidden')
+}
+
+function mongoInfo() {
+    console.log('hover detected') 
+    selectors.skills.style.backgroundColor = colors.mongo
+    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
+    selectors.pMongo.classList.toggle('hidden')
+}
+
+function nodeInfo() {
+    console.log('hover detected') 
+    selectors.skills.style.backgroundColor = colors.node
+    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
+    selectors.pNode.classList.toggle('hidden')
+}
+
+function sqlInfo() {
+    console.log('hover detected') 
+    selectors.skills.style.backgroundColor = colors.sql
+    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
+    selectors.pSQL.classList.toggle('hidden')
+}
+
+function reactInfo() {
+    console.log('hover detected') 
+    selectors.skills.style.backgroundColor = colors.react
+    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
+    selectors.pReact.classList.toggle('hidden')
+}
+
+selectors.imgCSS.addEventListener('mouseover', cssInfo);
+selectors.imgHTML.addEventListener('mouseover', htmlInfo);
+selectors.imgJS.addEventListener('mouseover', jsInfo);
+selectors.imgMongo.addEventListener('mouseover', mongoInfo);
+selectors.imgNode.addEventListener('mouseover', nodeInfo);
+selectors.imgSQL.addEventListener('mouseover', sqlInfo);
+selectors.imgReact.addEventListener('mouseover', reactInfo);

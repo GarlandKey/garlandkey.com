@@ -105,6 +105,16 @@ section {
 \*---------------------------------------------------------------------------*/
 
 
+.black {
+    filter: brightness(0);
+    color: #000;
+}
+
+.white {
+    filter: brightness(0) invert(1);
+    color: #fff;
+}
+
 .hidden {
     display: none;
 }
