@@ -11,9 +11,11 @@ let colors = {
     react: '#282c34'
 }
 
-let selectors = {
+let selectors = { // TODO: create objects to seperate website sections
     blurb: document.querySelector('.blurb'),
+    bgColor: document.querySelector('.bgColor'),
     skills: document.querySelector('.skills'),
+    imgAll: document.querySelectorAll('.imgAll'),
     imgCSS: document.querySelector('#imgCSS'),
     imgHTML: document.querySelector('#imgHTML'),
     imgAI: document.querySelector('#imgAI'),
@@ -34,52 +36,84 @@ let selectors = {
     pReact: document.querySelector('#pReact')
 }
 
+
+function turnTextBlack() {
+    selectors.blurb.style.color = '#000'
+}
+
+function turnTextWhite() {
+    selectors.blurb.style.color = '#fff'
+}
+
+function turnImgBlack() {
+    Array.from(selectors.imgAll).forEach(selector => selector.classList.remove('filterWhite'))
+    Array.from(selectors.imgAll).forEach(selector => selector.classList.add('filterBlack'))
+}
+
+function turnImgWhite() {
+    Array.from(selectors.imgAll).forEach(selector => selector.classList.remove('filterBlack'))
+    Array.from(selectors.imgAll).forEach(selector => selector.classList.add('filterWhite'))
+}
+
+
 function cssInfo() {
-    console.log('hover detected')
-    selectors.skills.style.backgroundColor = colors.css
-    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
-    selectors.pCSS.classList.toggle('hidden')
+    console.log('CSS hover detected')
+    turnTextWhite()
+    turnImgWhite()
+    selectors.skills.style.backgroundColor = colors.css // changes color of background
+    Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden')) // hides all blurbs
+    selectors.pCSS.classList.remove('hidden') // displays css blurb
 }
 
 function htmlInfo() {
-    console.log('hover detected') 
+    console.log('HTML hover detected')
+    turnTextWhite()
+    turnImgWhite()
     selectors.skills.style.backgroundColor = colors.html
     Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
     selectors.pHTML.classList.toggle('hidden')
 }
 
 function jsInfo() {
-    console.log('hover detected') 
-    selectors.skills.style.classList.remove('white')
-    selectors.skills.style.classList.add('black')
-    selectors.pJS.style.color = '#000'
+    console.log('JS hover detected') 
+    turnTextBlack()
+    turnImgBlack()
+    selectors.skills.style.backgroundColor = colors.js
     Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
     selectors.pJS.classList.toggle('hidden')
 }
 
 function mongoInfo() {
-    console.log('hover detected') 
+    console.log('MongoDB hover detected')
+    turnTextWhite()
+    turnImgWhite()
     selectors.skills.style.backgroundColor = colors.mongo
     Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
     selectors.pMongo.classList.toggle('hidden')
 }
 
 function nodeInfo() {
-    console.log('hover detected') 
+    console.log('nodeJS hover detected')
+    turnTextWhite()
+    turnImgWhite()
     selectors.skills.style.backgroundColor = colors.node
     Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
     selectors.pNode.classList.toggle('hidden')
 }
 
 function sqlInfo() {
-    console.log('hover detected') 
+    console.log('PostgreSQL hover detected')
+    turnTextWhite()
+    turnImgWhite()
     selectors.skills.style.backgroundColor = colors.sql
     Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
     selectors.pSQL.classList.toggle('hidden')
 }
 
 function reactInfo() {
-    console.log('hover detected') 
+    console.log('React hover detected')
+    turnTextWhite()
+    turnImgWhite()
     selectors.skills.style.backgroundColor = colors.react
     Array.from(document.querySelectorAll('.blurb')).forEach(selector => selector.classList.add('hidden'))
     selectors.pReact.classList.toggle('hidden')
