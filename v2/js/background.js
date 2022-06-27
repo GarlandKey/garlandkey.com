@@ -1,6 +1,6 @@
-import WebGLFluid from 'https://unpkg.com/webgl-fluid@0.1.0/dist/webgl-fluid.es.js'
+import webglFluid from './webgl-fluid.es.js'
 
-WebGLFluid(document.querySelector('canvas'), {
+webglFluid(document.querySelector('canvas'), {
     IMMEDIATE: true, // 'true' || 'false'
     TRIGGER: 'hover', // 'click' || 'hover'
     SIM_RESOLUTION: 128, // default: 128 | range: 32,64,128,256
