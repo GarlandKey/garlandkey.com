@@ -100,7 +100,7 @@ canvas {
     inset: 0;
     pointer-events: auto; 
     position: absolute;
-    z-index: -1;
+    z-index: 2;
 }
 
 
@@ -181,7 +181,9 @@ section {
     flex-flow: column nowrap;
     gap: 4vh;
     justify-content: center;
+    position: absolute;
     user-select:none;
+    z-index: 3;
 }
 
 
@@ -219,7 +221,9 @@ section {
     color: #fff;
     display: flex;
     flex-flow: wrap;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+    position: relative;
+    top: 100vh;
 }
 
 
@@ -279,6 +283,8 @@ section {
     height: 100vh;
     justify-content: space-evenly;
     max-width: 100vw;
+    position: relative;
+    top: 200vh;
 }
 
 
