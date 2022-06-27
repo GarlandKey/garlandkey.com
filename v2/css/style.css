@@ -83,15 +83,6 @@ table {
 }
 
 
-/* Metaballs Test */
-
-
-canvas {
-    height: 100vh;
-    width: 100vw;
-}
-
-
 html {
     background: #000;
     font: 62.5% 'Mulish', sans-serif;
@@ -173,8 +164,8 @@ section {
 
 .hero {
     align-items: center;
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #000;
     display: flex;
     flex-flow: column nowrap;
     gap: 4vh;
@@ -183,7 +174,7 @@ section {
 
 
 .hero h1 {
-    color: #fff;
+    color: #000;
     font-size: clamp(2rem, 1rem + 2vw, 15rem);
     padding-bottom: 5rem;
 }
