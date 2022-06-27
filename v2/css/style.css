@@ -15,7 +15,10 @@
 \*---------------------------------------------------------------------------*/
 
 
-
+canvas {
+    display: block;
+  }
+  
 
 
 /*---------------------------------------------------------------------------*\
@@ -268,7 +271,7 @@ section {
     display: flex;
     flex-flow: column nowrap;
     height: 100vh;
-    justify-content: center;
+    justify-content: space-evenly;
     max-width: 100vw;
 }
 
@@ -280,31 +283,54 @@ section {
     color: #d9d9d9;
     flex-flow: column nowrap;
     font-family: 'Merriweather', serif;
-    font-size: 8vw;
+    font-size: 7.5vw;
     height: 50vh;
     justify-content: center;
     transform: rotate(-4deg) skew(-4deg);
-    transition: all 2s ease-in-out;
     width: 105vw;
 }
 
-.contact-email > a {
+.contact-email > a,
+.contact-email > a:link,
+.contact-email > a:visited {
     color: #d9d9d9;
     text-decoration: none;
     transform: skew(4deg);
 }
 
 
-.contact-email > a:hover {
+.contact-email > a:hover,
+.contact-email > a:active,
+.contact-email > a:focus {
     text-decoration: underline;
 }
 
 .contact > nav > ul {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
     width: 100vw;
+}
+
+
+.contact > nav > ul > li {
+    align-items: center;
+    display: flex;
+    height: 4.5vw;
+    justify-content: center;
+    width: 4.5vw;
+}
+
+
+.contact-img { /* TODO: Add media query with larger icons */
+    width: 4vw;
+}
+
+
+.contact-img:hover,
+.contact-img:active {
+    width: 4.5vw;
 }
 
 
