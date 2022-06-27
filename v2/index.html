@@ -14,11 +14,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Mulish:wght@300&display=swap" rel="stylesheet">
 
+    <!-- preloaded javascript -->
+    <script type="text/javascript" src='js/dat.gui.min.js'></script>
+
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- animated background canvas -->
+    <canvas></canvas>
+    
     <!-- topnav -->
     <nav class="fade-in topnav overflow-hidden hidden"> <!-- TODO: Remove hidden tag -->
         <ul>
@@ -31,7 +37,7 @@
     <!-- splash -->
     <section class="card-full hero">
         <div class="overflow-hidden">
-            <img class="logo-unroll-up" src="img/logo.svg" alt="Garland Key" id="logo">
+            <img class="logo-unroll-up" src="logo.svg" alt="Garland Key" id="logo">
         </div>
         <div class="overflow-hidden">
             <h1 class="h1-unroll-up">Full-stack Software Engineer</h1>
@@ -66,7 +72,7 @@
     </section>
 
     <!-- contact -->
-    <section class="contact overflow-hidden" id="contact">
+    <section class="contact" id="contact">
         <section class="contact-email tilt">
             <a href="mailto:hello@garlandkey.com" target="_blank">hello@garlandkey.com</a>
         </section>
@@ -80,6 +86,13 @@
             </ul>
         </nav>
     </section>
+
+    <!-- <script type="text/javascript" src='js/anime.min.js'></script> -->
+    <!-- <script type="text/javascript" src='dat.gui.min.js'></script> -->
+    <!-- <script type="text/javascript" src="https://unpkg.com/webgl-fluid@0.1.0/dist/webgl-fluid.umd.js"></script> -->
+    <!-- <script type="text/javascript" src='https://unpkg.com/webgl-fluid@0.0.4/dist/webgl-fluid.umd.min.js'></script> -->
+    <script type="module" src="https://unpkg.com/webgl-fluid@0.1.0/dist/webgl-fluid.umd.js"></script>
+    <script type="module" src="js/background.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
