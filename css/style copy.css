@@ -8,9 +8,8 @@
     1. RESET - http://meyerweb.com/eric/tools/css/reset/
     2. MAIN - Type rules
     3. SECTIONS - Organized in loading order of semantic html
-    4. QUERIES -  Media queries
-    5. SHARED - Shared rules
-    6. ANIMATIONS - Keyframe & animations
+    4. SHARED - Shared rules
+    5. ANIMATIONS - Keyframe & animations
 
 \*---------------------------------------------------------------------------*/
 
@@ -94,19 +93,9 @@ html {
 }
 
 
-canvas {
-    height: 100vh;
-    width: 100vw;
-    inset: 0;
-    pointer-events: auto; 
-    position: absolute;
-    z-index: 2;
-}
-
-
 section {
     overflow: hidden;
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; <= Snap to each section */
 }
 
 
@@ -115,80 +104,36 @@ section {
 \*---------------------------------------------------------------------------*/
 
 
-/* topnav */
+/* hero section */
 
 
-.topnav {
+.hero {
+    align-items: center;
+    background-image: linear-gradient(178deg, transparent 80%, #1c1c1c calc(80% + 2px));
+    color: #fff;
     display: flex;
-    /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-size: calc(3rem + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
-    height: 10vh;
-    justify-content: flex-end;
-    position: fixed;
-    text-shadow: -0.25rem 0.25rem 0.3rem rgba(0, 0, 0, 0.5);
-    top: 0;
+    flex-flow: column nowrap;
+    gap: 4vh;
+    height: 80vh;
+    justify-content: center;
+    user-select:none;
     width: 100vw;
     z-index: 1;
 }
 
 
-.topnav ul {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    width: 50vw;
-}
-
-
-.topnav a {
-    transition: all .2s ease-in-out;
-}
-
-
-.topnav a:is(:active,:focus,:hover,:link,:visited) {
-    display:inline-block;
-    color: #fff;
-    text-decoration: none;
-}
-
-
-.topnav a:is(:hover,:focus,:active) {
-    transform: scale(1.1);
-    border-bottom: 0.1rem solid white;
-}
-
-
-.topnav i {
-    color: #fff;
-    transform: scale(0.75);
-    transition: all .2s ease-in-out;
-}
-
-.topnav i:is(:active, :hover) {
-    transform: scale(1);
-}
-
-
-/* splash section */
-
-
-.hero {
-    align-items: center;
-    background: transparent;
-    color: #fff;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 4vh;
-    justify-content: center;
+.hero canvas {
+    height: 80vh;
+    width: 100vw;
+    inset: 0;
+    pointer-events: auto; 
     position: absolute;
-    user-select:none;
-    z-index: 3;
+    z-index: -1;
 }
 
 
 .hero h1 {
-    color: #fff;
+    color: #d9d9d9;
     font-size: clamp(2rem, 1rem + 2vw, 15rem);
     padding-bottom: 5rem;
 }
@@ -200,75 +145,236 @@ section {
 }
 
 
-/* ducky */
-
-
-#ducky img {
-    display: none;
-    height: 45vh;
-    left: 5vw;
-    position: fixed;
-    top: 20vh;
-    transform: scaleX(-1);
-}
-
-
 /* skills */
 
 
 .skills {
     align-items: center;
+    background-image: linear-gradient(182deg, #1c1c1c 80%, #2c2c2c calc(80% + 2px));
     color: #fff;
     display: flex;
-    flex-flow: wrap;
-    justify-content: space-evenly;
-    position: relative;
-    top: 100vh;
+    flex-flow: row wrap;
+    gap: 5rem;
+    justify-content: center;
+    width: 100vw;
 }
 
 
-.bgColor {
-    background-color: #333;
+.skills p {
+    align-self: flex-start;
+    color: #d9d9d9;
+    font-size: 3.5rem;
+    font-weight: 200;
+    line-height: 4.5rem;
+    min-width: 350px;
+    padding-top: 10rem;
+    width: 35vw;
 }
 
 
-.blurb {
-    color: #fff;
-    /* calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-size: calc(2rem + (60 - 20) * ((100vw - 300px) / (1600 - 300)));
-    width: calc(2rem + (60 - 20) * ((100vw - 300px) / (1600 - 300)));
-    max-width: 95vw;
-    min-width: 50vw;
-}
-
-
-.skills img {
-    width: 15rem;
-}
-
-
-.skills ul {
-    align-items: center;
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 2vw;
-    justify-content: space-evenly;
+    gap: 3rem 10rem; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "item1 item1 item1 item1 item1 item1"
+        "item2 item2 item2 item3 item3 item3"
+        "item4 item4 item5 item5 item6 item6"
+        "item7 item7 item7 item8 item8 item8"
+        "item9 item9 item9 item9 item9 item9";
+    padding-bottom: 20rem;
 }
 
 
-/* scroll section */
-
-
-#scroll {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
+.emoji {
+    height: 3.5rem;
 }
 
 
-#scroll img {
-    height: 5rem;
+.skills-grid img {
+    width: 8rem;
+}
+
+
+.item1 {
+    grid-area: item1;
+    justify-self: center;
+}
+.item2 {
+    grid-area: item2;
+    justify-self: end;
+}
+.item3 {
+    grid-area: item3;
+    justify-self: start;
+}
+.item4 {
+    grid-area: item4;
+    justify-self: end;
+}
+.item5 {
+    grid-area: item5;
+    justify-self: center;
+}
+.item6 {
+    grid-area: item6;
+    justify-self: start;
+}
+.item7 {
+    grid-area: item7;
+    justify-self: end;
+}
+.item8 {
+    grid-area: item8;
+    justify-self: start;
+}
+.item9 { 
+    grid-area: item9;
+    justify-self: center;
+}
+
+
+/* portfolio */
+
+
+.portfolio {
+    align-items: auto;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5rem;
+    justify-content: center;
+    width: 100vw;
+}
+
+
+.portfolio a {
+    color: #d9d9d9;
+    text-decoration: none;
+}
+
+
+.portfolio i {
+    padding: 0 0.5rem;
+}
+
+
+.portfolio article {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
+
+.portfolio h3 {
+    align-self: start;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    justify-self: end;
+    padding-bottom: 1rem;
+    width: 40rem;
+}
+
+
+.portfolio img {
+    align-self: flex-start;
+    border-radius: 0.5rem;
+    justify-self: left;
+    margin-bottom: 20vh;
+    width: 35rem;
+}
+
+.portfolio p {
+    align-self: flex-start;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 3rem;
+    padding-bottom: 3rem;
+    width: 40rem;
+}
+
+
+.portfolio .portfolio-link {
+    align-self: start;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+    width: 40rem;
+}
+
+
+.portfolio .portfolio-link-reverse {
+    align-self: start;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    width: 40rem;
+}
+
+
+.bkg-one {
+    background-image: linear-gradient(178deg, #2c2c2c 80%, #3c3c3c calc(80% + 2px));
+}
+
+
+.bkg-two {
+    background-image: linear-gradient(182deg, #3c3c3c 80%, #4c4c4c calc(80% + 2px));
+}
+
+
+.bkg-three {
+    background-image: linear-gradient(178deg, #4c4c4c 80%, #d9d9d9 calc(80% + 2px));
+}
+
+
+/* resume */
+
+.resume {
+    align-items: center;
+    background: #d9d9d9;
+    color: #2c2c2c;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+
+.resume h3,
+.resume h3 a,
+.resume h3 a:link,
+.resume h3 a:visited {
+    align-self: center;
+    color: #2c2c2c;
+    font-family: 'Merriweather', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    justify-self: end;
+    padding: 5rem 0;
+    text-align: center;
+    width: 40rem;
+}
+
+
+.resume h3 a:active,
+.resume h3 a:hover{
+    color: #4c4c4c;
+}
+
+
+.resume embed {
+    border-radius: 0.5rem;
+    height: 120rem;
+    overflow: hidden;
+    width: 85rem;
 }
 
 
@@ -283,8 +389,6 @@ section {
     height: 100vh;
     justify-content: space-evenly;
     max-width: 100vw;
-    position: relative;
-    top: 200vh;
 }
 
 
@@ -301,6 +405,7 @@ section {
     transform: rotate(-4deg) skew(-4deg);
     width: 105vw;
 }
+
 
 .contact-email > a,
 .contact-email > a:link,
@@ -329,6 +434,7 @@ section {
 .contact > nav > ul > li {
     align-items: center;
     display: flex;
+    flex-flow: row wrap;
     height: 4.5vw;
     justify-content: center;
     width: 4.5vw;
@@ -342,6 +448,9 @@ section {
 
 .contact-img:hover,
 .contact-img:active {
+    border-bottom: 5px solid #000;
+    filter: drop-shadow(0 0.5rem 0.1rem rgb(0 0 0 / 0.2));
+    padding-bottom: 2rem;
     width: 4.5vw;
 }
 
@@ -356,9 +465,17 @@ section {
 \*---------------------------------------------------------------------------*/
 
 
-.click-through {
-    pointer-events: none;
+.divider-fwd {
+    background-image: linear-gradient(184deg, #414654 80%, #4c5c96 calc(80% + 2px));
+    width: 100vw;
 }
+
+.divider-bk {
+    background-image: linear-gradient(184deg, #414654 80%, #4c5c96 calc(80% + 2px));
+    width: 100vw;
+}
+
+
 
 .white {
     color: #fff;
@@ -387,12 +504,6 @@ section {
 
 .overflow-hidden {
     overflow: hidden;
-}
-
-
-.card-full {
-    height: 100vh;
-    width: 100vw;
 }
 
 

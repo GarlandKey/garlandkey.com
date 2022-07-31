@@ -3,11 +3,11 @@ import webglFluid from './webgl-fluid.es.js'
 webglFluid(document.querySelector('canvas'), {
 
     /* interactivity */
-    TRIGGER: 'hover', //----------------------  default: 'hover' | range: 'click','hover'
+    TRIGGER: 'click', //----------------------  default: 'hover' | range: 'click','hover'
 
     /* toggle options */
     BLOOM: true, //---------------------------  default: 'true'  | range: 'true','false'
-    COLORFUL: true, //------------------------  default: 'true'  | range: 'true','false'
+    COLORFUL: false, //------------------------  default: 'true'  | range: 'true','false'
     IMMEDIATE: true, //-----------------------  default: 'true'  | range: 'true','false'
     PAUSED: false, //-------------------------  default: 'false' | range: 'true','false'
     SHADING: true, //-------------------------  default: 'true'  | range: 'true','false'
