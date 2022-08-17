@@ -1,3 +1,5 @@
+![Screenshot_20220816_215343](https://user-images.githubusercontent.com/3108516/185037666-c210441c-efdc-4afa-859f-9d9ca629555e.png)
+
 # My Portfolio Website
 
 This is my personal portfolio website.
