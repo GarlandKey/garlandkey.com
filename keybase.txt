@@ -1,0 +1,62 @@
+==================================================================
+https://keybase.io/garland_key
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://garlandkey.com
+  * I am garland_key (https://keybase.io/garland_key) on keybase.
+  * I have a public key with fingerprint 8847 D2C7 60B8 E5BF 8F58  BA79 92D8 9F2C 9EA9 BAA9
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0116c3a627898dae71188187cd2af5e98100204b27f7f9ba95b9c17116fc77fdd1b90a",
+      "fingerprint": "8847d2c760b8e5bf8f58ba7992d89f2c9ea9baa9",
+      "host": "keybase.io",
+      "key_id": "92d89f2c9ea9baa9",
+      "kid": "0116c3a627898dae71188187cd2af5e98100204b27f7f9ba95b9c17116fc77fdd1b90a",
+      "uid": "c6f3561a4d31ff0fc48a43ce1bb44e19",
+      "username": "garland_key"
+    },
+    "service": {
+      "hostname": "garlandkey.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1671404211,
+  "expire_in": 157680000,
+  "prev": "338ce0cb41ea3d3f85704f252b99f82a157486a297063956700dc744a061dbc0",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtkjtoFEEYx/c0BzEiKsJZWTgiWBznzOzsPA4RBG0DdhaRY56X5S675+7exRBS
+KBYRiUgQA0HQSgsLLSzUUpAUhw+wUQJ2KSyCWIqFzgQVBEunGeb7/v/f92Bu7dsd
+TTYOrayOyw9vZW38WUX63vqzRaByswDai6Bndy7bN7asOr3UgDaACFEdS4oZF9xI
+yxDiHHGmDZYusYIjCDEkCjPHnFBSJEpo5FXUacacMUgJKEETuDTr2mJQpFnlsZwT
+ZrBmFCpuE+W4S7iSTAhsuHBYCys9TApvnM3L4PDNKVnaVpr7mH90dtr7h/4/9z3c
+wWnq4oQiSUyMnINOEy5JrC1SihCLQt1haYtMzlmv7sqiLzPTCQtdagKfGKXaht2G
+Yf4WeU1L53MeMCjyKtd53+dmq2pQtoO3WhgE8bxVnV+Yjkoz45fpHSNblGmegTby
+Sl2lgYsoQwQSjFAT2MuDtLCdNCgSRjn0J9SxI4+M44tcW6gVQVbGJnY8YZA4nGAl
+hONYegvhVGLBII1FQhmERjNCJKTIKA1BmOxSloM29X3KrmeWaTeT1bCwYGlqeTgR
+NSajI42jE63tF/0fN+7OrJ3Sf/5ffVf4fNHUngO/I5vT0ff6ysdj97/1iusXZs7z
+N7eXb27Vx/G703ufPrj66vnZzSe16Mr0p68Hz3w5efj44+335+7QR+sb115u2K3X
+D0+szq/V9v8E
+=8qxL
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/garland_key
+
+==================================================================
