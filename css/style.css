@@ -369,9 +369,9 @@ footer {
 }
 
 
-/* thinkbig */
+/* adacomp */
 
-.thinkbig {
+.adacomp {
     background: #2c2c2c;
     clip-path: polygon(
         0 0, /* left top */
@@ -385,16 +385,16 @@ footer {
 }
 
 
-.thinkbig img {
+.adacomp img {
     padding: 5rem;
     width: 65rem;
 }
 
 
-/* darling & mason */
+/* thinkbig */
 
 
-.darling-mason {
+.thinkbig {
     background: #3c3c3c;
     clip-path: polygon(
         0 0, /* left top */
@@ -408,16 +408,16 @@ footer {
 }
 
 
-.darling-mason img {
+.thinkbig img {
     padding: 5rem;
     width: 65rem;
 }
 
 
-/* dstor */
+/* darling & mason */
 
 
-.dstor {
+.darling-mason {
     background: #4c4c4c;
     clip-path: polygon(
         0 0, /* left top */
@@ -431,7 +431,7 @@ footer {
 }
 
 
-.dstor img {
+.darling-mason img {
     padding: 5rem;
     width: 65rem;
 }
