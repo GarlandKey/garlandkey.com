@@ -609,14 +609,14 @@ footer {
 
 
     .thinkbig .container,
-    .dstor .container {
+    .adacomp .container {
         flex-wrap: wrap-reverse;
     }
 
 
     .thinkbig img,
     .darling-mason img,
-    .dstor img {
+    .adacomp img {
         padding-bottom: 0;
     }
 
@@ -653,7 +653,7 @@ footer {
 
     .thinkbig img,
     .darling-mason img,
-    .dstor img {
+    .adacomp img {
         margin: 5rem 2rem;
         width: 100vw;
     }
@@ -737,7 +737,7 @@ footer {
 
     .thinkbig img,
     .darling-mason img,
-    .dstor img {
+    .adacomp img {
         margin: 0 2rem;
     }
 
