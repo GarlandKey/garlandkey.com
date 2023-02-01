@@ -6,8 +6,6 @@ This is my personal portfolio website.
 
 **Link to project:** https://garlandkey.com
 
-![alt tag](https://github.com/GarlandKey/creative-content/blob/main/garlandkey.com-github-banner.webp)
-
 ## How It's Made
 
 **Tech used:** HTML & CSS
