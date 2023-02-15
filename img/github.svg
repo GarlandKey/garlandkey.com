@@ -7,7 +7,7 @@
    version="1.1"
    id="svg4"
    sodipodi:docname="github.svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +25,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.74316406"
-     inkscape:cx="511.3272"
+     inkscape:cx="339.09067"
      inkscape:cy="511.3272"
-     inkscape:current-layer="svg4" />
+     inkscape:current-layer="svg4"
+     inkscape:window-width="3840"
+     inkscape:window-height="2087"
+     inkscape:window-x="0"
+     inkscape:window-y="44"
+     inkscape:window-maximized="1" />
   <path
      fill-rule="evenodd"
      clip-rule="evenodd"
@@ -35,5 +40,5 @@
      transform="scale(64)"
      fill="#1B1F23"
      id="path2"
-     style="fill:#000000;fill-opacity:1" />
+     style="fill:#d0ccc6;fill-opacity:1" />
 </svg>
