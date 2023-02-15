@@ -569,7 +569,7 @@ footer {
 
 .contact-img:hover,
 .contact-img:active {
-    border-bottom: 5px solid #D0CCC6;
+    border-bottom: 5px solid #1c1c1c;
     filter: drop-shadow(0 0.5rem 0.1rem rgb(0 0 0 / 0.2));
     padding-bottom: 2rem;
     max-width: 9rem;
