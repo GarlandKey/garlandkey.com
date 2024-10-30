@@ -1,73 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Garland Key | Software Engineer</title>
 
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/e4fc72c080.js" crossorigin="anonymous"></script>
-
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,700;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- preloaded javascript -->
     <script type="text/javascript" src="js/dat.gui.min.js"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css">    
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <!-- hero -->
     <section class="hero">
-        <div class="overflow-hidden">
-            <img class="logo-slide-up" src="img/logo.svg" alt="Garland Key" id="logo">
-        </div>
-        <div class="overflow-hidden">
-            <h1 class="h1-slide-up">Software Engineer</h1>
-        </div>
-        <!-- fluid simulation canvas -->
-        <canvas></canvas>
+      <div class="overflow-hidden">
+        <img
+          class="logo-slide-up"
+          src="img/logo.svg"
+          alt="Garland Key"
+          id="logo"
+        />
+      </div>
+      <div class="overflow-hidden">
+        <h1 class="h1-slide-up">Software Engineer</h1>
+      </div>
+      <!-- fluid simulation canvas -->
+      <canvas></canvas>
     </section>
 
     <!-- skills -->
     <section class="skills">
-        <div class="container">
-            <p><img src="/img/wave.webp" class="emoji" alt="a waving hand"> Hi there! My name is Garland. I turn code into art.<img src="/img/unicorn.webp" class="emoji" alt="a unicorn"> Here are some of the tools that I use to work my magic! <img src="/img/mage.webp" class="emoji" alt="a mage"></p>
-            <div class="skills-grid">
-                <img src="/img/css.svg" class="item1" alt="CSS" title="CSS">
-                <img src="/img/html.svg" class="item2" alt="HTML" title="HTML">
-                <img src="/img/js.svg" class="item3" alt="JavaScript" title="JavaScript">
-                <img src="/img/nextjs.svg" class="item4" alt="Next.js" title="Next.js">
-                <img src="/img/react.svg" class="item5" alt="React.js" title="React.js">
-                <img src="/img/ex.svg" class="item6" alt="Express.js" title="Express.js">
-                <img src="/img/mongodb.svg" class="item7" alt="MongoDB" title="MongoDB">
-                <img src="/img/nodejs.svg" class="item8" alt="Node.js" title="Node.js">
-                <img src="/img/postgresql.svg" class="item9" alt="PostgreSQL" title="PostgreSQL">
-            </div>
-        </div>
+      <div class="container">
+        <img src="/img/unicorn.webp" class="unicorn" alt="Unicorn" />
+        <p>I craft innovative solutions that blend artistic vision and technical precision.</p>
+        <!-- <div class="skills-grid">
+          <img src="/img/css.svg" class="item1" alt="CSS" title="CSS" />
+          <img src="/img/html.svg" class="item2" alt="HTML" title="HTML" />
+          <img
+            src="/img/js.svg"
+            class="item3"
+            alt="JavaScript"
+            title="JavaScript"
+          />
+          <img
+            src="/img/nextjs.svg"
+            class="item4"
+            alt="Next.js"
+            title="Next.js"
+          />
+          <img
+            src="/img/react.svg"
+            class="item5"
+            alt="React.js"
+            title="React.js"
+          />
+          <img
+            src="/img/ex.svg"
+            class="item6"
+            alt="Express.js"
+            title="Express.js"
+          />
+          <img
+            src="/img/mongodb.svg"
+            class="item7"
+            alt="MongoDB"
+            title="MongoDB"
+          />
+          <img
+            src="/img/nodejs.svg"
+            class="item8"
+            alt="Node.js"
+            title="Node.js"
+          />
+          <img
+            src="/img/postgresql.svg"
+            class="item9"
+            alt="PostgreSQL"
+            title="PostgreSQL"
+          />
+        </div> -->
+      </div>
     </section>
 
     <!-- contact -->
     <section class="contact overflow-hidden" id="contact">
-        <section class="contact-email tilt">
-            <a href="mailto:hello@garlandkey.com" target="_blank">hello@garlandkey.com</a>
-        </section>
-        <nav>
-            <ul>
-                <li><a href="https://angel.co/u/garland-key" target="_blank"><img src="img/angellist.svg" alt="Angel List" class="contact-img"></a></li>
-                <li><a href="https://github.com/GarlandKey" target="_blank"><img src="img/github.svg" alt="GitHub" class="contact-img"></a></li>
-                <li><a href="https://garlandkey.hashnode.dev" target="_blank"><img src="img/hashnode.svg" alt="Hashnode" class="contact-img"></a></li>
-                <li><a href="https://www.linkedin.com/in/garlandkey" target="_blank"><img src="img/linkedin.svg" alt="LinkedIn" class="contact-img"></a></li>
-                <li><a href="https://twitter.com/garland_key" target="_blank"><img src="img/twitter.svg" alt="Twitter" class="contact-img"></a></li>
-            </ul>
-        </nav>
+      <section class="contact-email tilt email-expand">
+        <a href="mailto:hello@garlandkey.com" target="_blank"
+          >hello@garlandkey.com</a
+        >
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://github.com/GarlandKey" target="_blank">
+              <svg class="contact-img expand" version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path transform="scale(64)" d="m8 0c-4.42 0-8 3.58-8 8 0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38 3.16-1.06 5.45-4.06 5.45-7.59 0-4.42-3.58-8-8-8z" clip-rule="evenodd" class="contact-img" fill-rule="evenodd"/>
+               </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/garlandkey" target="_blank">
+              <svg class="contact-img expand" version="1.1" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" class="contact-img"/>
+               </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/garland_key" target="_blank">
+              <svg class="contact-img expand" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="m459.37 151.72c.325 4.548.325 9.097.325 13.645 0 138.72-105.58 298.56-298.56 298.56-59.452 0-114.68-17.219-161.14-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.27-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.98v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.26 216.36 109.81-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.93 104.93-104.93 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                class="contact-img" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </section>
 
     <footer><small>Garland Key &copy; 2024</small></footer>
     <script type="module" src="js/webgl-fluid.js"></script>
-</body>
+  </body>
 </html>
